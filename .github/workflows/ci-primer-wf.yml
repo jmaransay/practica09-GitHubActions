@@ -24,7 +24,7 @@ jobs:
           print (platform.processor())
         shell: python
  
- comandos_windows:
+  comandos_windows:
    runs-on: windows-latest
 
    steps:
@@ -35,4 +35,3 @@ jobs:
      - name: bash
        run: pwd
        shell: bash
-
