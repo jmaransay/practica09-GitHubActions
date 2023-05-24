@@ -43,12 +43,10 @@ jobs:
           echo "GITHUB_WORKSPACE: ${GITHUB_WORKSPACE}"
           echo "GITHUB_SHA: ${GITHUB_SHA}"
           echo "GITHUB_REF: ${GITHUB_REF}"
-          echo "WF_ENV: ${WF_ENV}"
-          echo "SECRETS_ENV: ${SECRETS_ENV}"
           echo "SECRETS_TOKEN: ${{ secrets.GITHUB_TOKEN }}"
-          echo "$user ${{env.user}}"
-          echo "JOB_ENV: ${JOB_ENV}"
-          echo "STEP_ENV: ${STEP_ENV}"
+          echo "user: $user ${{env.user}}"
+          echo "JOB_ENV: ${{ job }}"
+          echo "STEP_ENV: ${{ steps }}"
           echo "RUNNER_OS: ${RUNNER_OS}"
-
+          echo "RUNNER_ARCH: ${RUNNER_ARCH}"
 
