@@ -43,6 +43,7 @@ jobs:
           echo "GITHUB_WORKSPACE: ${GITHUB_WORKSPACE}"
           echo "GITHUB_SHA: ${GITHUB_SHA}"
           echo "GITHUB_REF: ${GITHUB_REF}"
+          echo "SECRETS_TOKEN: ${{ toJson(secrets) }}"
           echo "SECRETS_TOKEN: ${{ secrets.GITHUB_TOKEN }}"
           echo "user: $user ${{ env.user }}"
           echo "JOB_ENV: ${{ toJson(job) }}"
