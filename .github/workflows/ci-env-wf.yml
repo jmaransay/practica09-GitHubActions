@@ -44,9 +44,9 @@ jobs:
           echo "GITHUB_SHA: ${GITHUB_SHA}"
           echo "GITHUB_REF: ${GITHUB_REF}"
           echo "SECRETS_TOKEN: ${{ secrets.GITHUB_TOKEN }}"
-          echo "user: $user ${{env.user}}"
-          echo "JOB_ENV: ${{ job.env }}"
-          echo "STEP_ENV: ${{ steps.env }}"
+          echo "user: $user ${{ env.user }}"
+          echo "JOB_ENV: ${{ toJson(job) }}"
+          echo "STEP_ENV: ${{ toJson(steps) }}"
           echo "RUNNER_OS: ${RUNNER_OS}"
           echo "RUNNER_ARCH: ${RUNNER_ARCH}"
 
