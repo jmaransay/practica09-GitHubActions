@@ -29,10 +29,14 @@ jobs:
 
    steps:
      - name: PowerShell
-       run: Get-Location
+       run: | 
+              Get-Location
+              Get-ChildItem
        shell: powershell
 
      - name: bash
-       run: pwd
+       run: | 
+              pwd
+              ls -la
        shell: bash
 
